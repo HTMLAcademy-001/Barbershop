@@ -1,6 +1,7 @@
 # Проект «Барбершоп Бородинский» от [HTML Academy](https://htmlacademy.ru/)
 
-Вёрстка: [Vanyusha Pupkin](https://github.com/vanyusha-pupkin)
+* Студент: [Vanyusha Pupkin](https://github.com/vanyusha-pupkin)
+* Наставник: [Максим Сёмушкин](https://up.htmlacademy.ru/adaptive/10/user/48647).
 
 ---
 
