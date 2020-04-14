@@ -6,13 +6,13 @@
 @import "global/_global.scss";
 
 /* ----------------------------- variables ----------------------------- */
-@import "global/variables.scss";
+@import "global/_variables.scss";
 
 /* ------------------------------- mixins ------------------------------ */
-@import "global/mixins.scss";
+@import "global/_mixins.scss";
 
 /* ----------------------------- animations ----------------------------- */
-@import "blocks/animations.scss";
+@import "global/_animations.scss";
 
 /* ------------------------------- blocks ------------------------------- */
 @import "blocks/**/*.scss";
