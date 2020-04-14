@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Барбершоп «Бородинский» - Запись на стрижку</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -14,8 +14,90 @@
 
   <main class="page-content">
 
-    <h1 class="visually-hidden"></h1>
+    <header class="content-header">
+      <h1 class="content-header__title page-title">Запись на стрижку</h1>
+      <a class="content-header__button button" href="index.html">На главную</a>
+    </header>
 
+    <form class="form-sign-up" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="form-sign-up__fieldset">
+        <legend class="visually-hidden" >Данные о клиенте</legend>
+        <div class="form-sign-up__group  form-sign-up__group--name">
+          <label class="visually-hidden" for="form-name">Имя</label>
+          <input class="form-sign-up__input" type="text" name="name" id="form-name" placeholder="Имя">
+          <label class="visually-hidden" for="form-surname">Фамилия</label>
+          <input class="form-sign-up__input" type="text" name="surname" id="form-surname" placeholder="Фамилия">
+          <label class="visually-hidden" for="">Отчество</label>
+          <input class="form-sign-up__input" type="text" name="patronymic" id="form-patronymic" placeholder="Имя">
+        </div>
+        <div class="form-sign-up__group  form-sign-up__group--contacts">
+          <label class="visually-hidden" for="form-phone">Контактный телефон</label>
+          <input class="form-sign-up__input" type="text" name="phone" id="form-phone" placeholder="Контактный телефон">
+          <label class="visually-hidden" for="form-email">Контактный e-mail</label>
+          <input class="form-sign-up__input" type="text" name="email" id="form-email" placeholder="Контактный e-mail">
+        </div>
+        <textarea class="form-sign-up__textarea" name="information" id="form-information" ></textarea>
+      </fieldset>
+
+      <fieldset class="form-sign-up__fieldset">
+        <legend class="form-sign-up__legend">ВЫберите модель бороды:</legend>
+        <ul class="form-sign-up__list-models">
+          <li class="form-sign-up__model  form-sign-up__model--admiral">
+            <input class="form-sign-up__radio" type="radio" name="beard-model" id="beard-model-admiral" value="admiral" checked>
+            <label class="form-sign-up__model-name" for="beard-model-admiral">адмирал</label>
+          </li>
+          <li class="form-sign-up__model  form-sign-up__model--woodcutter">
+            <input class="form-sign-up__radio" type="radio" name="beard-model" id="beard-model-woodcutter" value="woodcutter">
+            <label class="form-sign-up__model-name" for="beard-model-woodcutter">лесоруб</label>
+          </li>
+          <li class="form-sign-up__model  form-sign-up__model--polar-explorer">
+            <input class="form-sign-up__radio" type="radio" name="beard-model" id="beard-model-polar-explorer" value="polar-explorer">
+            <label class="form-sign-up__model-name" for="beard-model-polar-explorer">полярник</label>
+          </li>
+          <li class="form-sign-up__model  form-sign-up__model--boyar">
+            <input class="form-sign-up__radio" type="radio" name="beard-model" id="beard-model-boyar" value="boyar">
+            <label class="form-sign-up__model-name" for="beard-model-boyar">боярин</label>
+          </li>
+          <li class="form-sign-up__model  form-sign-up__model--sage">
+            <input class="form-sign-up__radio" type="radio" name="beard-model" id="beard-model-sage" value="sage">
+            <label class="form-sign-up__model-name" for="beard-model-sage">мудрец</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="form-sign-up__fieldset">
+        <legend class="form-sign-up__legend">Дополнительные услуги:</legend>
+        <ul class="form-sign-up__list-add-services">
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="dye-beard" id="checkbox-dye-beard" checked>
+            <label for="checkbox-dye-beard" class="form-sign-up__add-service-name">Подкрасить бороду</label>
+          </li>
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="comb-beard" id="checkbox-comb-beard">
+            <label for="checkbox-comb-beard" class="form-sign-up__add-service-name">Причесать бороду</label>
+          </li>
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="remove-gray-hair" id="checkbox-remove-gray-hair">
+            <label for="checkbox-remove-gray-hair" class="form-sign-up__add-service-name">Убрать седину</label>
+          </li>
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="twist-mustache" id="checkbox-twist-mustache" checked>
+            <label for="checkbox-twist-mustache" class="form-sign-up__add-service-name">Накрутить усы</label>
+          </li>
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="trim-temples" id="checkbox-trim-temples">
+            <label for="checkbox-trim-temples" class="form-sign-up__add-service-name">Подровнять виски</label>
+          </li>
+          <li class="form-sign-up__add-service">
+            <input type="checkbox" class="form-sign-up__checkbox" name="polish-bald-head" id="checkbox-polish-bald-head">
+            <label for="checkbox-polish-bald-head" class="form-sign-up__add-service-name">Отполировать лысину</label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button class="form-sign-up__button button" type="submit">Отправить заявку</button>
+
+    </form>
 
   </main>
 
