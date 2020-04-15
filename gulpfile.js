@@ -22,6 +22,7 @@ const
   mqpacker      = require('css-mqpacker'),
   autoprefixer  = require('autoprefixer'),
   // ghPages = require('gulp-gh-pages');
+  path1         = require('path'),
   ghPages       = require('gh-pages');
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
@@ -160,6 +161,9 @@ let build =  gulp.series(clean,
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);
-// exports.deploy = deploy;
 
-ghpages.publish('build', function(err) {});
+
+function deploy(cb) {
+  ghPages.publish(path1.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
