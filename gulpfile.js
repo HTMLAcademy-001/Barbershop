@@ -21,8 +21,8 @@ const
   postcss       = require('gulp-postcss'),
   mqpacker      = require('css-mqpacker'),
   autoprefixer  = require('autoprefixer'),
-  ghPages = require('gulp-gh-pages');
-  // ghPages       = require('gh-pages');
+  // ghPages = require('gulp-gh-pages');
+  ghPages       = require('gh-pages');
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
 const isProd     = !isDev;
@@ -133,24 +133,6 @@ function clean(){
   return del(path.clean);
 };
 
-// gulp.task('deploy', function(){
-//   return gulp.src(path.deploy)
-//   .pipe(ghPages());
-// });
-
-// function deploy(){
-//   return gulp.src(path.deploy)
-//       .pipe(ghPages());
-//  };
-
-gulp.task("deploy", function(){
-  return gulp.src(path.deploy)
-  .pipe(ghPages({
-    remoteUrl: "git@github.com:vanyusha-pupkin/barbershop.git",
-    force: true
-  }));
-});
-
 function watch (){
     browserSync.init({
         server: {
@@ -179,3 +161,5 @@ let build =  gulp.series(clean,
 exports.build = build;
 exports.watch = gulp.series(build, watch);
 // exports.deploy = deploy;
+
+ghpages.publish('build', function(err) {});

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp watch --dev",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -32,7 +32,8 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
-    "gulp-webp": "^4.0.1"
+    "gulp-webp": "^4.0.1",
+    "push-dir": "^0.4.1"
   },
   "browserslist": [
     "last 2 version",
