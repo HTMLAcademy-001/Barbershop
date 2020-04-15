@@ -3,6 +3,7 @@
 const
   gulp          = require('gulp'),
   sass          = require('gulp-sass'),
+  sassGlob      = require('gulp-sass-glob'),
   kit           = require('gulp-kit-2'),
   del           = require('del'),
   browserSync   = require('browser-sync').create(),
@@ -33,7 +34,7 @@ const path = {
     fonts:     'build/fonts/'
   },
   src:{
-    html:      'src/*.kit',
+    html:      ['src/**/*.html', '!src/**/_*.html'],
     scss:      'src/scss/style.scss',
     js:        'src/js/main.js',
     img:       ["src/img/**/*.{jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
@@ -63,6 +64,7 @@ function html(){
 function style(){
   return gulp.src(path.src.scss)
       .pipe(gulpif(isDev, sourcemaps.init()))
+        .pipe(sassGlob())
         .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(postcss([
           autoprefixer(),
