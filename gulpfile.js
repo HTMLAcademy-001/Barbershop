@@ -138,10 +138,15 @@ function clean(){
 //   .pipe(ghPages());
 // });
 
-function deploy(){
+// function deploy(){
+//   return gulp.src(path.deploy)
+//       .pipe(ghPages());
+//  };
+
+gulp.task("deploy", function(){
   return gulp.src(path.deploy)
-      .pipe(ghPages());
- };
+  .pipe(ghPages());
+});
 
 function watch (){
     browserSync.init({
@@ -170,4 +175,4 @@ let build =  gulp.series(clean,
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);
-exports.deploy = deploy;
+// exports.deploy = deploy;
