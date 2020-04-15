@@ -145,7 +145,10 @@ function clean(){
 
 gulp.task("deploy", function(){
   return gulp.src(path.deploy)
-  .pipe(ghPages());
+  .pipe(ghPages({
+    remoteUrl: "git@github.com:vanyusha-pupkin/barbershop.git",
+    force: true
+  }));
 });
 
 function watch (){
