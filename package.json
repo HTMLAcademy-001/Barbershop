@@ -1,11 +1,12 @@
 {
-  "name": "site-name",
+  "name": "barbershop",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp watch --dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +15,10 @@
     "browser-sync": "^2.26.7",
     "css-mqpacker": "^7.0.0",
     "del": "^5.1.0",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",

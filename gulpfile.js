@@ -20,7 +20,9 @@ const
   rename        = require('gulp-rename'),
   postcss       = require('gulp-postcss'),
   mqpacker      = require('css-mqpacker'),
-  autoprefixer  = require('autoprefixer');
+  autoprefixer  = require('autoprefixer'),
+  ghPages = require('gulp-gh-pages');
+  // ghPages       = require('gh-pages');
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
 const isProd     = !isDev;
@@ -37,8 +39,8 @@ const path = {
     html:      ['src/**/*.html', '!src/**/_*.html'],
     scss:      'src/scss/style.scss',
     js:        'src/js/main.js',
-    img:       ["src/img/**/*.{jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
-    imgWebp:   'src/img/**/*.{jpg,png}',
+    img:       ["src/img/**/*.{jpeg,jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
+    imgWebp:   'src/img/**/*.{jpeg,jpg,png}',
     spritesvg: 'src/img/icons/icon-*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'
   },
@@ -46,11 +48,12 @@ const path = {
     html:      ['./src/**/*.kit', './src/**/*.html'],
     scss:      'src/scss/**/*.scss',
     js:        'src/js/**/*.js',
-    img:       ['!src/img/icons/**/*.*', 'src/img/**/*.*'],
-    spritesvg: 'src/img/icons/*.svg',
+    img:       ['!src/img/svg-sprite/*.*', 'src/img/**/*.*'],
+    spritesvg: 'src/img/svg-sprite/*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'
   },
   clean:       ['build/*'],
+  deploy:      ['build/**/*.*'],
   baseDir:     ['build/']
 };
 
@@ -130,6 +133,16 @@ function clean(){
   return del(path.clean);
 };
 
+// gulp.task('deploy', function(){
+//   return gulp.src(path.deploy)
+//   .pipe(ghPages());
+// });
+
+function deploy(){
+  return gulp.src(path.deploy)
+      .pipe(ghPages());
+ };
+
 function watch (){
     browserSync.init({
         server: {
@@ -157,3 +170,4 @@ let build =  gulp.series(clean,
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);
+exports.deploy = deploy;
