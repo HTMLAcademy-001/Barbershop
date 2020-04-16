@@ -3,6 +3,7 @@
 const
   gulp          = require('gulp'),
   sass          = require('gulp-sass'),
+  sassGlob      = require('gulp-sass-glob'),
   kit           = require('gulp-kit-2'),
   del           = require('del'),
   browserSync   = require('browser-sync').create(),
@@ -19,7 +20,10 @@ const
   rename        = require('gulp-rename'),
   postcss       = require('gulp-postcss'),
   mqpacker      = require('css-mqpacker'),
-  autoprefixer  = require('autoprefixer');
+  autoprefixer  = require('autoprefixer'),
+  // ghPages = require('gulp-gh-pages');
+  path1         = require('path'),
+  ghPages       = require('gh-pages');
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
 const isProd     = !isDev;
@@ -33,11 +37,11 @@ const path = {
     fonts:     'build/fonts/'
   },
   src:{
-    html:      'src/*.kit',
+    html:      ['src/**/*.html', '!src/**/_*.html'],
     scss:      'src/scss/style.scss',
     js:        'src/js/main.js',
-    img:       ["src/img/**/*.{jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
-    imgWebp:   'src/img/**/*.{jpg,png}',
+    img:       ["src/img/**/*.{jpeg,jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
+    imgWebp:   'src/img/**/*.{jpeg,jpg,png}',
     spritesvg: 'src/img/icons/icon-*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'
   },
@@ -45,11 +49,12 @@ const path = {
     html:      ['./src/**/*.kit', './src/**/*.html'],
     scss:      'src/scss/**/*.scss',
     js:        'src/js/**/*.js',
-    img:       ['!src/img/icons/**/*.*', 'src/img/**/*.*'],
-    spritesvg: 'src/img/icons/*.svg',
+    img:       ['!src/img/svg-sprite/*.*', 'src/img/**/*.*'],
+    spritesvg: 'src/img/svg-sprite/*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'
   },
   clean:       ['build/*'],
+  deploy:      ['build/**/*.*'],
   baseDir:     ['build/']
 };
 
@@ -63,6 +68,7 @@ function html(){
 function style(){
   return gulp.src(path.src.scss)
       .pipe(gulpif(isDev, sourcemaps.init()))
+        .pipe(sassGlob())
         .pipe(sass.sync({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(postcss([
           autoprefixer(),
@@ -155,3 +161,9 @@ let build =  gulp.series(clean,
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);
+
+
+function deploy(cb) {
+  ghPages.publish(path1.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;

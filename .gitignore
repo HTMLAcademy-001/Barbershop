@@ -1,6 +1,6 @@
 node_modules/
 build/
-#source/
+.publish/
 .DS_Store
 .idea
 *.ai
