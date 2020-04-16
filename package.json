@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp watch --dev",
     "build": "gulp build",
-    "deploy": "gulp deploy"
+    "deploy": "npm run build && gh-pages -d build",
   },
   "author": "",
   "license": "ISC",
