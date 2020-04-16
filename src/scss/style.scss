@@ -1,15 +1,15 @@
 
-/* ------------------------- connection of fonts ----------------------- */
-@import "global/_fonts.scss";
-
-/* --------------------------- global styles --------------------------- */
-@import "global/_global.scss";
-
 /* ----------------------------- variables ----------------------------- */
 @import "global/_variables.scss";
 
+/* ------------------------- connection of fonts ----------------------- */
+@import "global/_fonts.scss";
+
 /* ------------------------------- mixins ------------------------------ */
 @import "global/_mixins.scss";
+
+/* --------------------------- global styles --------------------------- */
+@import "global/_global.scss";
 
 /* ----------------------------- animations ----------------------------- */
 @import "global/_animations.scss";

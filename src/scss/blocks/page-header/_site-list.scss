@@ -1,0 +1,23 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.site-list__item {
+}
+.site-list__item--active {
+}
+
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    width: 570px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 780px;
+  }
+}

@@ -5,8 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "gulp watch --dev",
-    "build": "gulp build",
-    "deploy": "npm run build && gh-pages -d build",
+    "build": "gulp build"
   },
   "author": "",
   "license": "ISC",

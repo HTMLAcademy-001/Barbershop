@@ -20,10 +20,8 @@ const
   rename        = require('gulp-rename'),
   postcss       = require('gulp-postcss'),
   mqpacker      = require('css-mqpacker'),
-  autoprefixer  = require('autoprefixer'),
-  // ghPages = require('gulp-gh-pages');
-  path1         = require('path'),
-  ghPages       = require('gh-pages');
+  autoprefixer  = require('autoprefixer');
+
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
 const isProd     = !isDev;
@@ -161,9 +159,3 @@ let build =  gulp.series(clean,
 
 exports.build = build;
 exports.watch = gulp.series(build, watch);
-
-
-function deploy(cb) {
-  ghPages.publish(path1.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
