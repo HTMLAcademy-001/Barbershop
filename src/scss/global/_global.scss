@@ -3,53 +3,52 @@
 
 html, body {
 
-	// min-width: calc(860px + 4.7%);
+  min-width: 320px;
 
-	// padding: 0;
-	// margin: 0;
+  padding: 0;
+  margin: 0;
 
-	// font-family: "0000", "Arial", sans-serif;
-	// font-size: 00px;
-	// line-height: 00px;
-	// font-weight: 400;
-	// color: #fff;
+  font-family: "PTSans-Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  font-style: normal;
+  color: $light-font-color;
 
-
-	// background-position: top center;
-	// background-repeat: no-repeat;
+  background-color: $bg-darkgrey;
 }
 
 .container {
-	max-width: 0000px;
-	padding: 0 000px;
-	margin: 0 auto;
+  max-width: 0000px;
+  padding: 0 000px;
+  margin: 0 auto;
 }
 
 img{
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-	position: absolute;
+  position: absolute;
 
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
 
-	white-space: nowrap;
+  white-space: nowrap;
 
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 
 }
 
 .clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
