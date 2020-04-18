@@ -38,7 +38,7 @@ const path = {
     html:      ['src/**/*.html', '!src/**/_*.html'],
     scss:      'src/scss/style.scss',
     js:        'src/js/main.js',
-    img:       ["src/img/**/*.{jpeg,jpg,png,gif,svg}", "!src/img/icons/icon-*.svg"],
+    img:       ["src/img/**/*.{jpeg,jpg,png,gif,svg}", "!src/img/svg-sprite/*.svg"],
     imgWebp:   'src/img/**/*.{jpeg,jpg,png}',
     spritesvg: 'src/img/icons/icon-*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'

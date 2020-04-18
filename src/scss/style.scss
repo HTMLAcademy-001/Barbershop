@@ -1,19 +1,10 @@
 
-/* ----------------------------- variables ----------------------------- */
+@import "global/_normalize.scss";
 @import "global/_variables.scss";
-
-/* ------------------------- connection of fonts ----------------------- */
 @import "global/_fonts.scss";
-
-/* ------------------------------- mixins ------------------------------ */
 @import "global/_mixins.scss";
-
-/* --------------------------- global styles --------------------------- */
 @import "global/_global.scss";
-
-/* ----------------------------- animations ----------------------------- */
 @import "global/_animations.scss";
 
-/* ------------------------------- blocks ------------------------------- */
 @import "blocks/**/*.scss";
 
