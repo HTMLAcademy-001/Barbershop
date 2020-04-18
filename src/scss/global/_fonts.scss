@@ -1,21 +1,21 @@
 
 @font-face {
-  font-family: "PTSans-Narrow";
+  font-family: "PT Sans Narrow";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('PT Sans Narrow'), local('PTSans-Narrow'),
-  url("../fonts/PTSansNarrow-Regular.woff") format("woff"),
-  url("./fonts/PTSansNarrow-Regular.woff2") format("woff2");
+  src:  local('PT Sans Narrow'), local('PTSans-Narrow'),
+        url("../fonts/PTSansNarrow-Regular.woff") format("woff"),
+        url("./fonts/PTSansNarrow-Regular.woff2") format("woff2");
 }
 
 
 @font-face {
-  font-family: "PTSans-Narrow";
+  font-family: "PT Sans Narrow";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'),
-  url("../fonts/PTSansNarrow-Bold.woff") format("woff"),
-  url("../fonts/PTSansNarrow-Bold.woff2") format("woff2");
+  src:  local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'),
+        url("../fonts/PTSansNarrow-Bold.woff") format("woff"),
+        url("../fonts/PTSansNarrow-Bold.woff2") format("woff2");
 }
