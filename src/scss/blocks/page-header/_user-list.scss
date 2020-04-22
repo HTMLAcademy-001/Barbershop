@@ -33,9 +33,11 @@
   g {
     fill: #fff;
   }
+
 }
 
-@media (min-width: $tablet-width) {
+
+@media (min-width: $bp-tablet) {
   .user-list {
     display: flex;
     width: 60px;
@@ -73,7 +75,7 @@
 }
 
 
-@media (min-width: $desktop-width) {
+@media (min-width: $bp-desktop) {
   .user-list {
     width: auto;
     max-width: 160px;

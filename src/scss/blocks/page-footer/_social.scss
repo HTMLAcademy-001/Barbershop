@@ -1,0 +1,139 @@
+.social {}
+
+.social__title {
+  display: none;
+}
+
+.social__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+  line-height: 0;
+
+  list-style: none;
+}
+
+.social__item {
+  position: relative;
+
+  flex: 1 1 33.33%;
+
+  &:nth-child(n+1) {
+    margin-left: -1px;
+  }
+
+
+}
+
+.social__link {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+  height: 100px;
+
+  border: 1px solid #3f3f3f;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 26px;
+    height: 29px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &--vkontakte {
+    &::before {
+      background-image: url("../img/icons/icon-social-vk.svg");
+    }
+  }
+  &--facebook {
+    &::before {
+      background-image: url("../img/icons/icon-social-fb.svg");
+    }
+  }
+  &--instagram {
+    &::before {
+      background-image: url("../img/icons/icon-social-insta.svg");
+    }
+  }
+
+  &:hover {
+    z-index: 10;
+    border-color: #545454;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &:active {
+    z-index: -1;
+    border-color: transparent;
+    background-color: #202020;
+  }
+
+}
+
+@media (min-width: $bp-tablet) {
+  .social {}
+  .social__title {}
+  .social__list {}
+  .social__item {}
+  .social__link {}
+  .social__link--vkontakte {}
+  .social__link--facebook {}
+  .social__link--instagram {}
+}
+
+@media (min-width: $bp-desktop) {
+  .social {}
+  .social__title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .social__list {
+    justify-content: center;
+  }
+
+  .social__item {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+    margin-right: 6px;
+
+    border-right-width: 1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .social__link {
+    height: 100%;
+     &::before {
+        width: 20px;
+        height: 25px;
+     }
+  }
+  .social__link--vkontakte {}
+  .social__link--facebook {}
+  .social__link--instagram {}
+}

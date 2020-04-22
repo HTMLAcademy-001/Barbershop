@@ -1,0 +1,17 @@
+.works {}
+.works__list {}
+.works__item {
+  &--work-of-month {}
+}
+.works__image {}
+.works__review {}
+.works__title {}
+.works__text {}
+.works__parameter-list {}
+.works__parameter-item {
+  &--haircut {}
+  &--shaving {}
+  &--moustache {}
+  &--beard {}
+}
+

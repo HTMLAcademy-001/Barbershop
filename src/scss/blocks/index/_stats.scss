@@ -1,7 +1,7 @@
 .stats {
-  width: auto;
-  // width: 320px;
-  // margin: 0 auto;
+  // width: auto;
+  width: $mobile-width;
+  margin: 0 auto;
 }
 
 .stats__header {
@@ -47,7 +47,7 @@
     text-align: center;
     color: rgba(255, 255, 255, 0.3);
 
-    background-color: $bg-darkgrey;
+    background-color: #242424
   }
 
   &--top {
@@ -116,12 +116,12 @@
   text-align: right;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $bp-tablet) {
   .stats {
-    // width: 640px;
-    width: 84%;
-    max-width: 960px;
-    margin: 0 auto;
+    width: $tablet-width;
+    // width: 84%;
+    // max-width: 960px;
+    // margin: 0 auto;
     // margin-top: -185px;
     margin-top: -174px;
   }
@@ -217,18 +217,18 @@
 
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $bp-desktop) {
   .stats {
     display: flex;
 
-    width: 960px;
+    width: $desktop-width;
     margin-top: -160px;
   }
 
   .stats__header {
     flex-direction: column;
     // display: block;
-    width: 240px;
+    width: 330px;
 
     &::before {
       top: 22px;

@@ -1,7 +1,25 @@
-$bg-darkgrey: #292929;
+$bg-header: #000000;
+$bg-darkgrey-modile: #242424;
+$bg-darkgrey: #353535;
 $bg-lightgrey: #f8f5f2;
-$light-font-color: #f7f4f1;
+$bg-footer: #292929;
 
-$tablet-width: 768px;
-$desktop-width: 1200px;
-$mobile-width-only: 767px;
+$bg-main-nav: #826550;
+
+$font-light: #f7f4f1;
+
+$mobile-width: 320px;
+$tablet-width: 640px;
+$desktop-width: 960px;
+
+
+$bp-tablet: 768px;      //break point for tablet version
+$bp-desktop: 1200px;    //break point for desktop version
+
+$mobile-width-only: $bp-tablet - 1px;
+
+$mobile-padding: 20px;
+$tablet-padding: 65px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
