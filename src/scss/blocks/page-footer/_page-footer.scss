@@ -1,6 +1,15 @@
 .page-footer {
-  padding-top: 70px;
+  padding-top: 35px;
   padding-bottom: 25px;
+
+  background-color: $bg-footer;
+
+  &--inner {
+    position: relative;
+
+    @include two-triangles ($bg-footer, $bg-footer, $bg-footer, 34px, 0, 0);
+
+  }
 }
 .page-footer__wrapper {
   display: flex;

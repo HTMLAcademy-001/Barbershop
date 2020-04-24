@@ -1,0 +1,57 @@
+
+@mixin two-triangles ($bg-color-modile, $bg-color-tablet, $bg-color-desktop, $height-modile, $height-tablet, $height-desktop) {
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: ($height-modile * -1);
+    z-index: 2;
+
+    width: 0;
+    height: 0;
+
+    border-bottom: $height-modile solid $bg-color-modile;
+  }
+
+  &::before {
+    left: 0;
+    border-right: 50vw solid transparent;
+  }
+
+  &::after {
+    right: 0;
+    border-left: 50vw solid transparent;
+  }
+
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      // left: 0;
+      border-right: $mobile-width / 2 solid transparent;
+    }
+
+    &::after {
+      // right: 0;
+      border-left: $mobile-width / 2 solid transparent;
+    }
+  }
+
+  @media (min-width: $bp-tablet) {
+    &::before,
+    &::after {
+      top: ($height-tablet * -1);
+      border-bottom: $height-tablet solid $bg-color-tablet;
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    &::before,
+    &::after {
+      top: ($height-desktop * -1);
+      border-bottom: $height-desktop solid $bg-color-desktop;
+    }
+  }
+
+}

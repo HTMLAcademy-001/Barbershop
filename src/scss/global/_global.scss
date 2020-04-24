@@ -5,7 +5,11 @@
   box-sizing: border-box;
 }
 
-// html,
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   min-width: 320px;
 
@@ -17,6 +21,8 @@ body {
   color: $font-light;
 
   background-color: $bg-darkgrey-modile;
+
+  overflow-x: hidden;
 
   @media (min-width: $bp-tablet) {
     background-color: $bg-darkgrey;

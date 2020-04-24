@@ -10,7 +10,7 @@
   padding: 0;
 
   font-size: 30px;
-  line-height: 30px;
+  line-height: 40px;
   font-weight: 700;
   text-align: center;
 }
@@ -19,3 +19,34 @@
   display: none;
 }
 
+//=====================================================================
+
+@media (min-width: $bp-tablet) {
+  .page-title {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .page-title__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .page-title__title {
+    padding-top: 3px;
+
+    text-align: left;
+  }
+
+  .page-title  a {
+    display: block;
+  }
+
+}
+
+//=====================================================================
+
+@media (min-width: $bp-desktop) {
+
+}
