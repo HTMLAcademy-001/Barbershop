@@ -1,28 +1,51 @@
 
 @charset "utf-8";
 
-// html,
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
+  min-height: 100%;
+}
 
+body {
   min-width: 320px;
-
-  // padding: 0;
-  // margin: 0;
 
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
   font-weight: 400;
   font-style: normal;
-  color: $light-font-color;
+  color: $font-light;
 
-  background-color: $bg-darkgrey;
+  background-color: $bg-darkgrey-modile;
+
+  overflow-x: hidden;
+
+  @media (min-width: $bp-tablet) {
+    background-color: $bg-darkgrey;
+  }
 }
 
 .container {
-  max-width: 0000px;
-  padding: 0 000px;
+  width: $mobile-width;
+  // width: auto;
   margin: 0 auto;
+
+  @media (min-width: $bp-tablet) {
+    width: $tablet-width;
+    // width: auto;
+    // padding: 0 $tablet-padding;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: $desktop-width;
+    // width: auto;
+    margin: 0 auto;
+  }
 }
 
 img{

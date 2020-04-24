@@ -8,11 +8,14 @@
 }
 
 .site-list__item {
+  position: relative;
 
   &--active {}
 }
 
 .site-list a {
+  position: relative;
+
   display: block;
   padding: 12px 21px;
   padding-bottom: 13px;
@@ -41,7 +44,8 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+
+@media (min-width: $bp-tablet) {
   .site-list {
     display: flex;
     flex-wrap: wrap;
@@ -99,9 +103,19 @@
       opacity: 0.3;
     }
   }
+
+  .site-list__login-comb {
+    top: 8px;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
+  }
+
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $bp-desktop) {
   .site-list {
     width: 780px;
   }

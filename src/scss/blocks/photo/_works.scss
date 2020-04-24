@@ -1,0 +1,262 @@
+.works {
+  position: relative;
+
+  padding-bottom: 50px;
+}
+
+.works__wrapper {
+  padding: 0 $mobile-padding;
+}
+
+.works__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.works__item {
+  margin-bottom: 20px;
+
+  color: #000;
+
+  &--work-of-month {}
+}
+
+.works__image {
+  display: block;
+}
+
+.works__review {
+  padding: 20px;
+  padding-bottom: 0;
+
+  border: 1px solid #e5ddd5;
+  border-top-width: 0;
+}
+.works__title {
+  margin: 0;
+  margin-bottom: 18px;
+
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+.works__text {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.works__parameter-list {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+}
+
+.works__parameter-item {
+  position: relative;
+
+  padding-right: 30px;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: uppercase;
+
+  &--haircut {
+    padding-left: 30px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 21px;
+      height: 20px;
+
+      background-image: url("../img/icons/icon-scissors.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--shaving {
+    padding-left: 40px;
+
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 23px;
+      height: 21px;
+
+      background-image: url("../img/icons/icon-beard-1.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--moustache {
+    padding-left: 55px;
+    margin-left: -13px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 7px;
+      left: 0;
+
+      width: 45px;
+      height: 12px;
+
+      background-image: url("../img/icons/icon-mustache.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &--beard {
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 23px;
+      height: 21px;
+
+      background-image: url("../img/icons/icon-beard-1.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+//===================================================================
+
+@media (min-width: $bp-tablet) {
+  .works {}
+
+  .works__wrapper {
+    padding: 0;
+  }
+
+  .works__list {}
+
+  .works__item {
+    display: flex;
+
+    width: 100%;
+    margin-bottom: 45px;
+
+    &--work-of-month {
+    }
+  }
+
+  .works__image {
+    min-width: 270px;
+  }
+
+  .works__review {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+
+  .works__title {
+    margin-bottom: 25px;
+  }
+  .works__text {
+    margin-bottom: auto;
+  }
+  .works__parameter-list {}
+  .works__parameter-item {
+    &--haircut {}
+    &--shaving {}
+    &--moustache {}
+    &--beard {}
+  }
+}
+
+//===================================================================
+
+@media (min-width: $bp-desktop) {
+  .works {
+    padding-bottom: 40px;
+  }
+
+  .works__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 -20px;
+  }
+  .works__item {
+    flex-direction: column;
+    flex: 0 1 33.33%;
+    // flex-basis: 33.33%;
+
+    padding: 0 20px;
+
+    &--work-of-month {
+      flex-direction: row;
+      flex-basis: 100%;
+
+      .works__image {
+        min-width: 480px;
+      }
+
+  .works__review {
+    border-top-width: 1px;
+    border-left-width: 0;
+  }
+
+    }
+  }
+  .works__image {}
+
+  .works__review {
+    padding: 37px;
+    padding-bottom: 17px;
+
+    border-top-width: 0;
+    border-left-width: 1px;
+  }
+
+  .works__title {}
+  .works__text {}
+  .works__parameter-list {
+    padding-top: 30px;
+  }
+  .works__parameter-item {
+    &--haircut {}
+    &--shaving {}
+    &--moustache {}
+    &--beard {}
+  }
+
+}

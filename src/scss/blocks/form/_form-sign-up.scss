@@ -1,0 +1,83 @@
+.form-sign-up {}
+.form-sign-up__fieldset {}
+.form-sign-up__group {
+  &--name {}
+  &--contacts {}
+}
+.form-sign-up__input {}
+.form-sign-up__textarea {}
+.form-sign-up__legend {}
+.form-sign-up__list-models {}
+.form-sign-up__model {
+  &--admiral {}
+  &--woodcutter {}
+  &--polar-explorer {}
+  &--boyar {}
+  &--sage {}
+}
+.form-sign-up__radio {}
+.form-sign-up__model-name {}
+.form-sign-up__list-add-services {}
+.form-sign-up__add-service {}
+.form-sign-up__checkbox {}
+.form-sign-up__add-service-name {}
+.form-sign-up__button {}
+
+//======================================================================
+
+@media (min-width: $bp-tablet) {
+  .form-sign-up {}
+  .form-sign-up__fieldset {}
+  .form-sign-up__group {
+    &--name {}
+    &--contacts {}
+  }
+  .form-sign-up__input {}
+  .form-sign-up__textarea {}
+  .form-sign-up__legend {}
+  .form-sign-up__list-models {}
+  .form-sign-up__model {
+    &--admiral {}
+    &--woodcutter {}
+    &--polar-explorer {}
+    &--boyar {}
+    &--sage {}
+  }
+  .form-sign-up__radio {}
+  .form-sign-up__model-name {}
+  .form-sign-up__list-add-services {}
+  .form-sign-up__add-service {}
+  .form-sign-up__checkbox {}
+  .form-sign-up__add-service-name {}
+  .form-sign-up__button {}
+}
+
+
+//======================================================================
+
+@media (min-width: $bp-desktop) {
+.form-sign-up {}
+  .form-sign-up__fieldset {}
+  .form-sign-up__group {
+    &--name {}
+    &--contacts {}
+  }
+  .form-sign-up__input {}
+  .form-sign-up__textarea {}
+  .form-sign-up__legend {}
+  .form-sign-up__list-models {}
+  .form-sign-up__model {
+    &--admiral {}
+    &--woodcutter {}
+    &--polar-explorer {}
+    &--boyar {}
+    &--sage {}
+  }
+  .form-sign-up__radio {}
+  .form-sign-up__model-name {}
+  .form-sign-up__list-add-services {}
+  .form-sign-up__add-service {}
+  .form-sign-up__checkbox {}
+  .form-sign-up__add-service-name {}
+  .form-sign-up__button {}
+}

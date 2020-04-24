@@ -1,0 +1,43 @@
+.copyright {
+  padding: 0 $mobile-padding;
+}
+.copyright__text {
+  display: block;
+  padding-bottom: 15px;
+
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  text-align: center;
+}
+.copyright__link {
+  width: 100%;
+
+  color: #fff;
+
+  border-color: #3f3f3f;
+}
+
+@media (min-width: $bp-tablet) {
+  .copyright {
+    padding: 0;
+    width: 160px;
+  }
+  .copyright__text {
+    text-align: center;
+  }
+  .copyright__link {
+    width: 160px;
+  }
+}
+
+@media (min-width: $bp-desktop) {
+  .copyright {
+    text-align: right;
+  }
+  .copyright__text {
+    padding-right: 35px;
+    text-align: right;
+  }
+  .copyright__link {}
+}

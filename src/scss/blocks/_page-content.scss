@@ -1,0 +1,64 @@
+.page-content {
+   &--inner {
+    background-color: $bg-lightgrey;
+
+    @include two-triangles (transparent, $bg-lightgrey, $bg-lightgrey, 0, 42px, 65px);
+
+   }
+}
+
+//===================================================================
+
+@media (min-width: $bp-tablet) {
+  .page-content {
+     &--inner {
+      position: relative;
+      z-index: 1;
+
+      margin-top: -185px;
+
+      // &::before,
+      // &::after {
+      //   content: "";
+
+      //   position: absolute;
+      //   top: -42px;
+
+      //   width: 0;
+      //   height: 0;
+
+      //   border-bottom: 42px solid $bg-lightgrey;
+      // }
+
+      // &::before {
+      //   left: 0;
+      //   border-right: 50vw solid transparent;
+      // }
+
+      // &::after {
+      //   right: 0;
+      //   border-left: 50vw solid transparent;
+      // }
+
+     }
+  }
+}
+
+//===================================================================
+
+@media (min-width: $bp-desktop) {
+  .page-content {
+     &--inner {
+
+      margin-top: -305px;
+
+      // &::before,
+      // &::after {
+      //   top: -65px;
+      //   border-bottom: 65px solid $bg-lightgrey;
+      // }
+
+     }
+  }
+}
+

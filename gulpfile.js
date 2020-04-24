@@ -1,26 +1,28 @@
 'use strict';
 
 const
-  gulp          = require('gulp'),
-  sass          = require('gulp-sass'),
-  sassGlob      = require('gulp-sass-glob'),
-  kit           = require('gulp-kit-2'),
-  del           = require('del'),
-  browserSync   = require('browser-sync').create(),
-  sourcemaps    = require('gulp-sourcemaps'),
-  gulpif        = require('gulp-if'),
-  gcmq          = require('gulp-group-css-media-queries'),
-  csso          = require('gulp-csso'),
-  uglify        = require("gulp-uglify"),
-  imagemin      = require("gulp-imagemin"),
-  svgmin        = require("gulp-svgmin"),
-  svgstore      = require("gulp-svgstore"),
-  imgWebp       = require('gulp-webp'),
-  newer         = require("gulp-newer"),
-  rename        = require('gulp-rename'),
-  postcss       = require('gulp-postcss'),
-  mqpacker      = require('css-mqpacker'),
-  autoprefixer  = require('autoprefixer');
+  gulp              = require('gulp'),
+  sass              = require('gulp-sass'),
+  sassGlob          = require('gulp-sass-glob'),
+  kit               = require('gulp-kit-2'),
+  del               = require('del'),
+  browserSync       = require('browser-sync').create(),
+  sourcemaps        = require('gulp-sourcemaps'),
+  gulpif            = require('gulp-if'),
+  gcmq              = require('gulp-group-css-media-queries'),
+  csso              = require('gulp-csso'),
+  uglify            = require("gulp-uglify"),
+  imagemin          = require("gulp-imagemin"),
+  svgmin            = require("gulp-svgmin"),
+  svgstore          = require("gulp-svgstore"),
+  imgWebp           = require('gulp-webp'),
+  htmlmin           = require('gulp-htmlmin'),
+  removeEmptyLines  = require('gulp-remove-empty-lines'),
+  newer             = require("gulp-newer"),
+  rename            = require('gulp-rename'),
+  postcss           = require('gulp-postcss'),
+  mqpacker          = require('css-mqpacker'),
+  autoprefixer      = require('autoprefixer');
 
 
 const isDev     = (process.argv.indexOf('--dev') !== -1);
@@ -47,7 +49,7 @@ const path = {
     html:      ['./src/**/*.kit', './src/**/*.html'],
     scss:      'src/scss/**/*.scss',
     js:        'src/js/**/*.js',
-    img:       ['!src/img/svg-sprite/*.*', 'src/img/**/*.*'],
+    img:       ["src/img/**/*.{jpeg,jpg,png,gif,svg}", "!src/img/svg-sprite/*.svg"],
     spritesvg: 'src/img/svg-sprite/*.svg',
     fonts:     'src/fonts/**/*.{woff,woff2}'
   },
@@ -59,6 +61,10 @@ const path = {
 function html(){
   return gulp.src(path.src.html)
       .pipe(kit())
+      .pipe(htmlmin())
+      .pipe(removeEmptyLines({
+        removeComments: true
+      }))
       .pipe(gulp.dest(path.build.html))
       .pipe(browserSync.stream());
 };
